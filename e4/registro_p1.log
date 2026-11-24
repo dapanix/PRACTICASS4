@@ -1,0 +1,449 @@
+
+============================================================
+EXPERIMENTO: Config original (UMBRAL=1000, MANTENER=6) (UMBRAL=1000, MANTENER=6)
+============================================================
+T01 | Cliente: Hola, me llamo Carlos García y quiero pedir 5 kg de café Eti
+     | Asistente: Hola Carlos, gracias por confiar en nosotros. Por favor, confirmamos tu pedido d
+     | Tokens entrada: 79 | Salida: 52 | Total acum.: 131
+T02 | Cliente: ¿Cuánto cuesta el café Etiopía por kilo?
+     | Asistente: El precio del café Etiopía es de $1,800 por kilo. Totalizaría $9,000 por 5 kg. ¿
+     | Tokens entrada: 156 | Salida: 56 | Total acum.: 212
+T03 | Cliente: ¿Tienen descuentos para pedidos grandes, de más de 10 kg?
+     | Asistente: Sí, Carlos, tenemos un descuento especial para pedidos de 10 kg o más. En ese ca
+     | Tokens entrada: 239 | Salida: 68 | Total acum.: 307
+T04 | Cliente: Perfecto. ¿Qué otros cafés de origen único tienen disponible
+     | Asistente: Tenemos una variedad de cafés de origen único. Algunos de nuestros productos des
+     | Tokens entrada: 330 | Salida: 64 | Total acum.: 394
+T05 | Cliente: ¿El café de Guatemala tiene notas afrutadas?
+     | Asistente: Sí, Carlos, el café de Guatemala típicamente tiene notas afrutadas y caramelizad
+     | Tokens entrada: 414 | Salida: 50 | Total acum.: 464
+T06 | Cliente: Me interesa también probar el café de Colombia. ¿Lo tienen e
+     | Asistente: Sí, tenemos el café de Colombia disponible en grano, fresco y a granel. Es una e
+     | Tokens entrada: 491 | Salida: 68 | Total acum.: 559
+T07 | Cliente: ¿Pueden enviar a Bilbao? ¿Cuánto cuesta el envío?
+     | Asistente: Sí, Carlos, podemos enviar a Bilbao. Nuestro costo de envío es de $1,200 por env
+     | Tokens entrada: 587 | Salida: 100 | Total acum.: 687
+T08 | Cliente: ¿El envío es gratuito si compro más de cierta cantidad?
+     | Asistente: Disculpa la confusión, Carlos. El envío de más de 20 kg es gratuito, no 10 kg. P
+     | Tokens entrada: 711 | Salida: 68 | Total acum.: 779
+T09 | Cliente: Entonces añado 2 kg de Colombia al pedido del Etiopía. Total
+     | Asistente: Excelente elección, Carlos. Con el pedido total de 7 kg, el envío será completam
+     | Tokens entrada: 810 | Salida: 95 | Total acum.: 905
+T10 | Cliente: ¿Puedo pagar con transferencia bancaria?
+     | Asistente: Sí, Carlos, podemos aceptar pagos por transferencia bancaria. Por favor, proporc
+     | Tokens entrada: 925 | Salida: 57 | Total acum.: 982
+T11 | Cliente: ¿Cuántos días tarda en llegar a Bilbao el pedido?
+     | Asistente: Carlos, con el envío gratuito, tu pedido de 7 kg de café se enviará lo antes pos
+     | Tokens entrada: 1006 | Salida: 104 | Total acum.: 1110
+
+   *** COMPACTACIÓN en turno 12 (tokens antes: 1110) ***
+T12 | Cliente: Perfecto, confirmo el pedido. Por favor, ¿cuál es el nombre 
+     | Asistente: Excelente, Carlos. El nombre del cliente que ha confirmado este pedido es... Car
+     | Tokens entrada: 632 | Salida: 45 | Total acum.: 677
+
+
+--- VERIFICACIÓN: ¿Sobrevivió el nombre/datos del turno 1? ---
+Pregunta: ¿Recuerdas el nombre del cliente que hizo el primer pedido y su número de cliente?
+Respuesta: Sí, Carlos. El primer pedido fue hecho por Carlos García con el número de cliente 7749. ¿Quieres que te envíe un correo electrónico de confirmación del pedido para que puedas verificar los detalles?
+
+============================================================
+EXPERIMENTO: Config alternativa (UMBRAL=400, MANTENER=4) (UMBRAL=400, MANTENER=4)
+============================================================
+T01 | Cliente: Hola, me llamo Carlos García y quiero pedir 5 kg de café Eti
+     | Asistente: ¡Hola Carlos García! Acabamos de recibir tu pedido. Queremos confirmar que desea
+     | Tokens entrada: 79 | Salida: 86 | Total acum.: 165
+T02 | Cliente: ¿Cuánto cuesta el café Etiopía por kilo?
+     | Asistente: El precio del café Etiopía es de $1200 por kilo. Por lo que, para un pedido de 5
+     | Tokens entrada: 190 | Salida: 64 | Total acum.: 254
+T03 | Cliente: ¿Tienen descuentos para pedidos grandes, de más de 10 kg?
+     | Asistente: Sí, Carlos. Tostadero Retiro tiene un descuento para pedidos de más de 10 kg. Po
+     | Tokens entrada: 281 | Salida: 94 | Total acum.: 375
+T04 | Cliente: Perfecto. ¿Qué otros cafés de origen único tienen disponible
+     | Asistente: Tostadero Retiro tenemos una selección de cafés de origen único que podrían inte
+     | Tokens entrada: 398 | Salida: 120 | Total acum.: 518
+
+   *** COMPACTACIÓN en turno 5 (tokens antes: 518) ***
+T05 | Cliente: ¿El café de Guatemala tiene notas afrutadas?
+     | Asistente: Sí, el café de Guatemala "Antigua" que tenemos disponible tiene notas afrutadas 
+     | Tokens entrada: 379 | Salida: 55 | Total acum.: 434
+
+   *** COMPACTACIÓN en turno 6 (tokens antes: 434) ***
+T06 | Cliente: Me interesa también probar el café de Colombia. ¿Lo tienen e
+     | Asistente: Sí, tenemos el café de Colombia "Andean Gold" en grano, disponible en dos tamaño
+     | Tokens entrada: 361 | Salida: 66 | Total acum.: 427
+
+   *** COMPACTACIÓN en turno 7 (tokens antes: 427) ***
+T07 | Cliente: ¿Pueden enviar a Bilbao? ¿Cuánto cuesta el envío?
+     | Asistente: Sí, podemos enviar el pedido a Bilbao. El costo de envío es de $200 para pedidos
+     | Tokens entrada: 489 | Salida: 109 | Total acum.: 598
+
+   *** COMPACTACIÓN en turno 8 (tokens antes: 598) ***
+T08 | Cliente: ¿El envío es gratuito si compro más de cierta cantidad?
+     | Asistente: Si compras más de 20 kg, el envío es gratuito para ti, en lugar de los $100 que 
+     | Tokens entrada: 501 | Salida: 49 | Total acum.: 550
+
+   *** COMPACTACIÓN en turno 9 (tokens antes: 550) ***
+T09 | Cliente: Entonces añado 2 kg de Colombia al pedido del Etiopía. Total
+     | Asistente: Genial, con 7 kg de café Etiopía y 2 kg de café Colombia, tendrás un total de 9 
+     | Tokens entrada: 337 | Salida: 64 | Total acum.: 401
+
+   *** COMPACTACIÓN en turno 10 (tokens antes: 401) ***
+T10 | Cliente: ¿Puedo pagar con transferencia bancaria?
+     | Asistente: Claro, podemos procesar la pago de transferencia bancaria. Asegúrate de incluir 
+     | Tokens entrada: 342 | Salida: 44 | Total acum.: 386
+T11 | Cliente: ¿Cuántos días tarda en llegar a Bilbao el pedido?
+     | Asistente: El pedido se enviará desde Madrid y tardará aproximadamente 2-3 días para llegar
+     | Tokens entrada: 410 | Salida: 46 | Total acum.: 456
+
+   *** COMPACTACIÓN en turno 12 (tokens antes: 456) ***
+T12 | Cliente: Perfecto, confirmo el pedido. Por favor, ¿cuál es el nombre 
+     | Asistente: El nombre del cliente que confirmó el pedido es... no tengo esa información, tie
+     | Tokens entrada: 257 | Salida: 27 | Total acum.: 284
+
+============================================================
+EXPERIMENTO: Config alta (UMBRAL=5000, MANTENER=8) (UMBRAL=5000, MANTENER=8)
+============================================================
+T01 | Cliente: Hola, me llamo Carlos García y quiero pedir 5 kg de café Eti
+     | Asistente: ¡Hola Carlos García! Entendido, le voy a ayudar con tu pedido.  *   5 kg de café
+     | Tokens entrada: 79 | Salida: 73 | Total acum.: 152
+T02 | Cliente: ¿Cuánto cuesta el café Etiopía por kilo?
+     | Asistente: El precio del café Etiopía es de $600.00 por 5 kg.
+     | Tokens entrada: 177 | Salida: 20 | Total acum.: 197
+T03 | Cliente: ¿Tienen descuentos para pedidos grandes, de más de 10 kg?
+     | Asistente: Si es así, le voy a ofrecer un descuento de 5% en el total del pedido.  *   Prec
+     | Tokens entrada: 224 | Salida: 75 | Total acum.: 299
+T04 | Cliente: Perfecto. ¿Qué otros cafés de origen único tienen disponible
+     | Asistente: Tostadero Retiro tiene disponibles los siguientes cafés de origen único.  *   Co
+     | Tokens entrada: 322 | Salida: 87 | Total acum.: 409
+T05 | Cliente: ¿El café de Guatemala tiene notas afrutadas?
+     | Asistente: El café de Guatemala tiene notas cítricas y afrutadas.
+     | Tokens entrada: 429 | Salida: 15 | Total acum.: 444
+T06 | Cliente: Me interesa también probar el café de Colombia. ¿Lo tienen e
+     | Asistente: Sí, el café colombiano está disponible en grano, pero es un pedido especial.  * 
+     | Tokens entrada: 471 | Salida: 90 | Total acum.: 561
+T07 | Cliente: ¿Pueden enviar a Bilbao? ¿Cuánto cuesta el envío?
+     | Asistente: Sí, podemos enviar el pedido a Bilbao.  El costo de envío es de $150.00.  ¿Quier
+     | Tokens entrada: 589 | Salida: 38 | Total acum.: 627
+T08 | Cliente: ¿El envío es gratuito si compro más de cierta cantidad?
+     | Asistente: Sí, si compras más de 20 kg, el envío es gratuito.
+     | Tokens entrada: 651 | Salida: 19 | Total acum.: 670
+T09 | Cliente: Entonces añado 2 kg de Colombia al pedido del Etiopía. Total
+     | Asistente: ¡Excelente elección!  *   5 kg de café Etiopía: $570.00 (con descuento del 5% po
+     | Tokens entrada: 701 | Salida: 88 | Total acum.: 789
+T10 | Cliente: ¿Puedo pagar con transferencia bancaria?
+     | Asistente: Claro, podemos aceptar transferencia bancaria. También aceptamos tarjetas de cré
+     | Tokens entrada: 809 | Salida: 39 | Total acum.: 848
+T11 | Cliente: ¿Cuántos días tarda en llegar a Bilbao el pedido?
+     | Asistente: El pedido de café llegará a Bilbao en 3 a 5 días hábiles.
+     | Tokens entrada: 872 | Salida: 21 | Total acum.: 893
+T12 | Cliente: Perfecto, confirmo el pedido. Por favor, ¿cuál es el nombre 
+     | Asistente: El nombre del cliente que hizo este pedido es Carlos García y el número de clien
+     | Tokens entrada: 926 | Salida: 22 | Total acum.: 948
+
+
+============================================================
+RESUMEN DE RESULTADOS
+============================================================
+
+Config original (UMBRAL=1000, MANTENER=6):
+  Tokens entrada por turno: [79, 156, 239, 330, 414, 491, 587, 711, 810, 925, 1006, 632]
+  Compactaciones: 1
+    -> Turno 12: 1110 tokens antes -> 632 tokens después
+
+Config alternativa (UMBRAL=400, MANTENER=4):
+  Tokens entrada por turno: [79, 190, 281, 398, 379, 361, 489, 501, 337, 342, 410, 257]
+  Compactaciones: 7
+    -> Turno 5: 518 tokens antes -> 379 tokens después
+    -> Turno 6: 434 tokens antes -> 361 tokens después
+    -> Turno 7: 427 tokens antes -> 489 tokens después
+    -> Turno 8: 598 tokens antes -> 501 tokens después
+    -> Turno 9: 550 tokens antes -> 337 tokens después
+    -> Turno 10: 401 tokens antes -> 342 tokens después
+    -> Turno 12: 456 tokens antes -> 257 tokens después
+
+Config alta (UMBRAL=5000, MANTENER=8):
+  Tokens entrada por turno: [79, 177, 224, 322, 429, 471, 589, 651, 701, 809, 872, 926]
+  Compactaciones: 0
+    -> No se compactó (umbral no alcanzado)
+
+Verificación de memoria (turno 1 -> turno 12):
+  Sí, Carlos. El primer pedido fue hecho por Carlos García con el número de cliente 7749. ¿Quieres que te envíe un correo electrónico de confirmación del pedido para que puedas verificar los detalles?
+
+
+--- DATOS JSON PARA analisis.md ---
+{
+  "experimento1": {
+    "datos": [
+      {
+        "turno": 1,
+        "tokens_entrada": 79,
+        "tokens_salida": 52,
+        "compactado": false
+      },
+      {
+        "turno": 2,
+        "tokens_entrada": 156,
+        "tokens_salida": 56,
+        "compactado": false
+      },
+      {
+        "turno": 3,
+        "tokens_entrada": 239,
+        "tokens_salida": 68,
+        "compactado": false
+      },
+      {
+        "turno": 4,
+        "tokens_entrada": 330,
+        "tokens_salida": 64,
+        "compactado": false
+      },
+      {
+        "turno": 5,
+        "tokens_entrada": 414,
+        "tokens_salida": 50,
+        "compactado": false
+      },
+      {
+        "turno": 6,
+        "tokens_entrada": 491,
+        "tokens_salida": 68,
+        "compactado": false
+      },
+      {
+        "turno": 7,
+        "tokens_entrada": 587,
+        "tokens_salida": 100,
+        "compactado": false
+      },
+      {
+        "turno": 8,
+        "tokens_entrada": 711,
+        "tokens_salida": 68,
+        "compactado": false
+      },
+      {
+        "turno": 9,
+        "tokens_entrada": 810,
+        "tokens_salida": 95,
+        "compactado": false
+      },
+      {
+        "turno": 10,
+        "tokens_entrada": 925,
+        "tokens_salida": 57,
+        "compactado": false
+      },
+      {
+        "turno": 11,
+        "tokens_entrada": 1006,
+        "tokens_salida": 104,
+        "compactado": false
+      },
+      {
+        "turno": 12,
+        "tokens_entrada": 632,
+        "tokens_salida": 45,
+        "compactado": true
+      }
+    ],
+    "compactaciones": [
+      {
+        "turno": 12,
+        "tokens_antes": 1110,
+        "tokens_despues": 632
+      }
+    ]
+  },
+  "experimento2": {
+    "datos": [
+      {
+        "turno": 1,
+        "tokens_entrada": 79,
+        "tokens_salida": 86,
+        "compactado": false
+      },
+      {
+        "turno": 2,
+        "tokens_entrada": 190,
+        "tokens_salida": 64,
+        "compactado": false
+      },
+      {
+        "turno": 3,
+        "tokens_entrada": 281,
+        "tokens_salida": 94,
+        "compactado": false
+      },
+      {
+        "turno": 4,
+        "tokens_entrada": 398,
+        "tokens_salida": 120,
+        "compactado": false
+      },
+      {
+        "turno": 5,
+        "tokens_entrada": 379,
+        "tokens_salida": 55,
+        "compactado": true
+      },
+      {
+        "turno": 6,
+        "tokens_entrada": 361,
+        "tokens_salida": 66,
+        "compactado": true
+      },
+      {
+        "turno": 7,
+        "tokens_entrada": 489,
+        "tokens_salida": 109,
+        "compactado": true
+      },
+      {
+        "turno": 8,
+        "tokens_entrada": 501,
+        "tokens_salida": 49,
+        "compactado": true
+      },
+      {
+        "turno": 9,
+        "tokens_entrada": 337,
+        "tokens_salida": 64,
+        "compactado": true
+      },
+      {
+        "turno": 10,
+        "tokens_entrada": 342,
+        "tokens_salida": 44,
+        "compactado": true
+      },
+      {
+        "turno": 11,
+        "tokens_entrada": 410,
+        "tokens_salida": 46,
+        "compactado": false
+      },
+      {
+        "turno": 12,
+        "tokens_entrada": 257,
+        "tokens_salida": 27,
+        "compactado": true
+      }
+    ],
+    "compactaciones": [
+      {
+        "turno": 5,
+        "tokens_antes": 518,
+        "tokens_despues": 379
+      },
+      {
+        "turno": 6,
+        "tokens_antes": 434,
+        "tokens_despues": 361
+      },
+      {
+        "turno": 7,
+        "tokens_antes": 427,
+        "tokens_despues": 489
+      },
+      {
+        "turno": 8,
+        "tokens_antes": 598,
+        "tokens_despues": 501
+      },
+      {
+        "turno": 9,
+        "tokens_antes": 550,
+        "tokens_despues": 337
+      },
+      {
+        "turno": 10,
+        "tokens_antes": 401,
+        "tokens_despues": 342
+      },
+      {
+        "turno": 12,
+        "tokens_antes": 456,
+        "tokens_despues": 257
+      }
+    ]
+  },
+  "experimento3": {
+    "datos": [
+      {
+        "turno": 1,
+        "tokens_entrada": 79,
+        "tokens_salida": 73,
+        "compactado": false
+      },
+      {
+        "turno": 2,
+        "tokens_entrada": 177,
+        "tokens_salida": 20,
+        "compactado": false
+      },
+      {
+        "turno": 3,
+        "tokens_entrada": 224,
+        "tokens_salida": 75,
+        "compactado": false
+      },
+      {
+        "turno": 4,
+        "tokens_entrada": 322,
+        "tokens_salida": 87,
+        "compactado": false
+      },
+      {
+        "turno": 5,
+        "tokens_entrada": 429,
+        "tokens_salida": 15,
+        "compactado": false
+      },
+      {
+        "turno": 6,
+        "tokens_entrada": 471,
+        "tokens_salida": 90,
+        "compactado": false
+      },
+      {
+        "turno": 7,
+        "tokens_entrada": 589,
+        "tokens_salida": 38,
+        "compactado": false
+      },
+      {
+        "turno": 8,
+        "tokens_entrada": 651,
+        "tokens_salida": 19,
+        "compactado": false
+      },
+      {
+        "turno": 9,
+        "tokens_entrada": 701,
+        "tokens_salida": 88,
+        "compactado": false
+      },
+      {
+        "turno": 10,
+        "tokens_entrada": 809,
+        "tokens_salida": 39,
+        "compactado": false
+      },
+      {
+        "turno": 11,
+        "tokens_entrada": 872,
+        "tokens_salida": 21,
+        "compactado": false
+      },
+      {
+        "turno": 12,
+        "tokens_entrada": 926,
+        "tokens_salida": 22,
+        "compactado": false
+      }
+    ],
+    "compactaciones": []
+  },
+  "verificacion_memoria": "Sí, Carlos. El primer pedido fue hecho por Carlos García con el número de cliente 7749. ¿Quieres que te envíe un correo electrónico de confirmación del pedido para que puedas verificar los detalles?"
+}

@@ -1,0 +1,10 @@
+.env
+.venv/
+__pycache__/
+*.pyc
+*.db-shm
+*.db-wal
+nohup.out
+*.db
+p1_output.log
+slides/

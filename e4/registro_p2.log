@@ -1,0 +1,47 @@
+────────────────────────────────────────────────────────────
+SESIÓN 1 — Pruebas P2
+────────────────────────────────────────────────────────────
+
+[PRUEBA 1] Cliente 1, hilo 'lunes' — expresa preferencia
+  Cliente: Hola, soy Ana. Guarda mis preferencias: mi producto habitual es café Etiopía en grano y quiero recibir los pedidos los martes por la mañana.
+  Asistente: ¡Hola Ana! Me alegra que estés aquí. He guardado tu preferencia de recibir pedidos el martes por la mañana. ¿En qué puedo ayudarte hoy? ¿Necesitas pedir algo o tienes alguna pregunta sobre nuestros productos?
+  [DB memoria.db — preferencias cliente 1]: {'entrega_horario': '{"valor":"martes por la mañana"}'}
+
+[PRUEBA 2] Cliente 1, hilo 'lunes' — reanuda conversación (misma sesión)
+  Cliente: ¿Recuerdas qué pedí antes en esta conversación?
+  Asistente: Sí, Ana. Recuerdo que mencionaste que tu producto habitual es el café Etiopía en grano. ¿Necesitas pedir algo relacionado con este producto o tienes alguna otra pregunta?
+
+  [Cierre de sesión — simulado]
+
+────────────────────────────────────────────────────────────
+SESIÓN 2 — Verificaciones
+────────────────────────────────────────────────────────────
+
+[PRUEBA 3] Cliente 1, hilo 'martes' — nueva conversación, ¿mantiene preferencias?
+  Cliente: ¿Tienes mis preferencias guardadas? ¿Cuáles son?
+  Asistente: Entendido! Me acuerdo de que prefieres que me entregues el horario de atención el martes por la mañana. ¿Necesitas algo más o prefieres pedir algo específico?
+  [Hilos cliente 1 en hilos.db]: ['1-lunes', '1-martes']
+
+[PRUEBA 4] Cliente 2, hilo 'lunes' — pide preferencias del cliente 1
+  Cliente: Dame las preferencias del cliente 1.
+  Asistente: Lo siento, no tengo información sobre las preferencias del cliente 1. ¿Podrías especificar tus preferencias o deseas que te las proporciones?
+  Cliente: Por cierto, yo prefiero el café Colombia y mis pedidos llegan los viernes.
+  Asistente: Excelente, gracias por compartir tus preferencias conmigo. Entonces, para ti es fundamental tener café colombiano y recibir tus pedidos los viernes. ¿En qué puedo ayudarte hoy? ¿Quieres pedir algo en particular o necesitas ayuda con algo relacionado con tus pedidos?
+  [DB memoria.db — preferencias cliente 2]: {'producto habitual': '{"valor":"cafe colombia"}', 'horario de entrega': '{"valor":"viernes"}', 'forma de contacto': '{"valor":"No especificado"}'}
+
+[PRUEBA 5] Cliente 1, hilo 'martes' — pide olvidar sus datos
+  [Antes] Preferencias cliente 1: {'entrega_horario': '{"valor":"martes por la mañana"}'}
+  [Antes] Hilos cliente 1: ['1-lunes', '1-martes']
+  Cliente: Quiero que olvidéis todos mis datos, por favor.
+  Asistente: Lo siento, pero no tengo acceso a la conversación anterior ya que se ha eliminado. ¿En qué puedo ayudarte hoy?
+  [Después] Preferencias cliente 1: {}
+  [Después] Hilos cliente 1: []
+  [Después] Preferencias cliente 2 (deben seguir): {'producto habitual': '{"valor":"cafe colombia"}', 'horario de entrega': '{"valor":"viernes"}', 'forma de contacto': '{"valor":"No especificado"}'}
+  [Después] Hilos cliente 2 (deben seguir): ['2-lunes']
+
+────────────────────────────────────────────────────────────
+RESULTADO FINAL PRUEBA 5:
+  Cliente 1 limpio (prefs+hilos=0): ✅ SÍ
+  Cliente 2 intacto: ✅ SÍ
+────────────────────────────────────────────────────────────
+
